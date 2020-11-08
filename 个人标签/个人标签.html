@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人标签</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body {
+            font: 12px/24px 'Microsoft YaHei' ;
+        }
+        header{
+            width:600px;
+            margin:0 auto;
+            text-align:center;
+            background:sandybrown;
+        }
+        article{
+            height: 500px;
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid lawngreen;
+            position: relative;
+            //background: greenyellow;
+        }
+        article nav{
+            line-height: 30px;
+            height: 27px;
+            background-color: darkorange;
+        }
+        article nav ul li{
+            list-style:none;
+            float: left;
+            margin-right:1px;
+            width: 99px;
+            text-align: center;
+            color: white;
+        }
+        .first{
+            height: 180px;
+            border:1px solid lawngreen;
+
+        }
+
+        .second{
+            height: 100%;
+            width: 170px;
+
+            float: left;
+        }
+        img{
+            margin: 10px;
+        }
+       .thirty{
+             height: 100%;
+             width: 420px;
+
+             float:right;
+        }
+        .thirty ul{
+            margin-top: 14px;
+        }
+        .thirty ul li{
+            list-style: none;
+            line-height: 28px;
+            color: black;
+        }
+        .thirty ul li b{
+            color: aqua;
+        }
+        aside{
+           position:absolute;
+            top: 50%;
+            margin-top:  -125px;
+            right: -40px;
+            width: 30px;
+            height: 215px;
+            border: 1px solid #cc2244;
+        }
+        aside a{
+            text-align: center;
+            line-height: 28px;
+            height: 30px;
+            width: 100%;
+            display: block;
+            margin-bottom: 1px;
+            text-decoration: white;
+            background-color: darkorange;
+            color: white;
+        }
+          meter{
+              margin-left: 20px;
+          }
+        #bar{
+            margin-left: 20px;
+            width: 75px;
+            color: #cc2244;
+        }
+        .art{
+            margin-top: 10px;
+           height:131px;
+            width: 100%;
+        }
+        .foot{
+            text-align: center;
+            height: 120px;
+            width: 600px;
+            margin: 0 auto;
+            line-height: 110px;
+            background-color: darkgray;
+        }
+        #btn{
+            color: #cc2244;
+        }
+    </style>
+</head>
+<body>
+  <header>
+      <h1>阿飞的个人简介</h1>
+      <p>-云飞扬</p>
+  </header>
+<article>
+    <nav>
+        <ul>
+            <li>善良</li>
+            <li>可爱</li>
+            <li>坚强</li>
+            <li>爱国</li>
+            <li>诚信</li>
+            <li>自信</li>
+        </ul>
+    </nav>
+    <section class="first">
+        <section class="second">
+            <img src="thirty.jpg" height="160" width="160" alt="" />
+        </section>
+        <section class="thirty">
+            <ul>
+                <li><b>姓名:</b>云飞扬</li>
+                <li><b>性别:</b>男</li>
+                <li><b>出生日期:</b>1996<b>年</b>4<b>月</b>1<b>日</b></li>
+                <li><b>家庭住址:</b>四川省成都市</li>
+                <li><b>个人简介:</b>大风起兮云飞扬，安得猛士兮守四方</li>
+            </ul>
+        </section>
+
+    </section>
+    <aside>
+        <a href="">优秀</a>
+        <a href="">优秀</a>
+        <a href="">优秀</a>
+        <a href="">优秀</a>
+        <a href="">优秀</a>
+        <a href="">优秀</a>
+        <a href="">优秀</a>
+    </aside>
+    <section>
+        <h1 style="color: orange;font-size: 20px;margin: 20px">个人技能</h1>
+
+            <meter  value="18" low="8" high="16" max="20" ></meter>div+css熟练度  <br/>
+            <meter  value="14" low="8" high="16" min="0" max="20"></meter> js的熟练度   <br/>
+            <meter  value="4"  low="8" high="16" min="0" max="20" optimum="18"></meter>  liunx的熟练度   <br/>
+            <progress  id="bar" value="0"   max="100" ></progress><button id="btn">点我加满</button>
+    </section>
+    <section class="art">
+         <h1 style="font-size: 25px;color: darkorange;text-align: center">基本素养</h1>
+        <p style="text-align: left;font-size: 10px">
+            素养，即素质和修养。人们在社会活动中需要遵守一定的行为规范，而基本素养体现
+            在生活中的就是个人素质或者道德修养，包括外表形象、道德品质、知识水平、综合能力
+            等，通过个人在各种场合以及人际交往中的言行举止而表现出来。
+        </p>
+    </section>
+</article>
+  <footer class="foot">
+      联系电话：1223456xxx
+  </footer>
+<script>
+     var btn=document.getElementById("btn")
+     var n=0;
+     btn.onclick=function step() {
+        n++;
+        bar.value=n;
+        if (n<100) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+</script>
+</body>
+</html>
